@@ -1,11 +1,12 @@
-import { StatusBar } from 'expo-status-bar';
-import React , { useState } from 'react';
-import { StyleSheet, Text, Touchable, TouchableOpacity, View } from 'react-native';
+import React, { useState } from 'react';
+import { StyleSheet, Text,  TextInput, TouchableOpacity, View } from 'react-native';
 import Icon from 'react-native-vector-icons/AntDesign';
 import TodoContent from './TodoPopUp';
 
 
 export default function Todo() {
+    const [isSelected, setSelection] = useState(false);
+    const [value, setValue] = useState('')
     const [modalVisible, setModalVisible] = useState(false);
 
     return (
@@ -14,17 +15,19 @@ export default function Todo() {
                 <Text style={styles.t1}>
                     Today
             </Text>
-            <TouchableOpacity  onPress={() => {
+                <TouchableOpacity onPress={() => {
                     setModalVisible(!modalVisible);
                     console.log(setModalVisible)
                 }}>
-            <Icon name="pluscircleo" size={30}  />
-            </TouchableOpacity>
+                    <Icon name="pluscircleo" size={30} />
+                </TouchableOpacity>
             </View>
 
-            {modalVisible ? <View> <TodoContent  modalVisible={modalVisible}/></View>: null}
-            
-            
+            {modalVisible ? <View> <TodoContent modalVisible={modalVisible} /></View> : null}
+
+            <View>
+              
+            </View>
 
         </View>
     )
@@ -35,21 +38,21 @@ const styles = StyleSheet.create({
     Main: {
         backgroundColor: '#fff',
         borderWidth: 1,
-        justifyContent:"center"
+        justifyContent: "center"
     },
     Head: {
-      flexDirection:"row",
-      justifyContent:"space-between",
-      alignItems:"center",
-     borderWidth: 1 ,
-     paddingLeft:10,
-     paddingRight:10,
-    
-     
+        flexDirection: "row",
+        justifyContent: "space-between",
+        alignItems: "center",
+        borderWidth: 1,
+        paddingLeft: 10,
+        paddingRight: 10,
+
+
 
     },
-    t1:{
-        fontSize:30,    
-        fontWeight:"bold",
+    t1: {
+        fontSize: 30,
+        fontWeight: "bold",
     },
 });

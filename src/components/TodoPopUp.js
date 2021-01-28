@@ -3,6 +3,8 @@ import React, { useState } from 'react';
 import { StyleSheet, Text, Touchable, TouchableOpacity, View, Modal ,TouchableHighlight} from 'react-native';
 
 export default function TodoContent(props) {
+    
+
     console.log(props)
     return (
         <View style={styles.centeredView}>
@@ -19,26 +21,13 @@ export default function TodoContent(props) {
                     <View style={styles.modalView}>
                         <Text style={styles.modalText}>Hello World!</Text>
 
-                        {/* <TouchableHighlight
-                            style={{ ...styles.openButton, backgroundColor: "#2196F3" }}
-                            onPress={() => {
-                                setModalVisible(!modalVisible);
-                            }}
-                        >
-                            <Text style={styles.textStyle}>Hide Modal</Text>
-                        </TouchableHighlight> */}
+                       
+                        
                     </View>
                 </View>
             </Modal>
 
-            {/* <TouchableHighlight
-                style={styles.openButton}
-                onPress={() => {
-                    setModalVisible(true);
-                }}
-            >
-                <Text style={styles.textStyle}>Show Modal</Text>
-            </TouchableHighlight> */}
+          
         </View>
     )
 }
@@ -82,3 +71,4 @@ const styles = StyleSheet.create({
       textAlign: "center"
     }
   });
+  
