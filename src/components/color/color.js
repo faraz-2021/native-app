@@ -3,6 +3,6 @@ export const Colors = {
     red: '#F24444',
     gold: '#D9C57E',
     black:"000000",
-    white:"ffffff",
+    white:"#FFFFFF",
+    blue: "#18BBD5",
   };
-  

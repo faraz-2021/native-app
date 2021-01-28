@@ -1,6 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import React, { useState } from 'react';
 import { StyleSheet, Text, Touchable, TextInput, TouchableOpacity, View, Modal, TouchableHighlight } from 'react-native';
+import { Colors } from './color/color';
 
 export default function TodoModal(props) {
     const [value, setValue] = useState('Useless Placeholder');
@@ -53,8 +54,8 @@ const styles = StyleSheet.create({
     },
     modalView: {
         height: 200,
-        width: 200,
-        backgroundColor: "white",
+        width: 300,
+        backgroundColor: Colors.white,
         borderRadius: 20,
         padding: 35,
         alignItems: "center",
@@ -68,13 +69,13 @@ const styles = StyleSheet.create({
         elevation: 5
     },
     Button: {
-        color: "#18BBD5",
+        color:Colors.blue,
         fontSize: 15,
         marginTop: 10,
 
     },
     textStyle: {
-        color: "white",
+        color: Colors.white,
         fontWeight: "bold",
         textAlign: "center"
     },
@@ -91,7 +92,7 @@ const styles = StyleSheet.create({
     },
     innerView:{
         borderRadius: 20,
-        backgroundColor: "white",
+        backgroundColor: Colors.white,
         shadowColor: "#000",
         shadowOffset: {
             width: 0,
