@@ -1,6 +1,5 @@
-import { StatusBar } from 'expo-status-bar';
 import React, { useState } from 'react';
-import { StyleSheet, Text, Touchable, TextInput, TouchableOpacity, View, Modal, TouchableHighlight } from 'react-native';
+import { StyleSheet, Text, TextInput, TouchableOpacity, View, Modal, } from 'react-native';
 import { Colors } from './color/color';
 
 export default function TodoModal(props) {
@@ -80,18 +79,20 @@ const styles = StyleSheet.create({
         textAlign: "center"
     },
     modalText: {
-        width: 180, fontWeight: 'bold', fontSize: 20
+        width: 300, fontWeight: 'bold', fontSize: 20
     },
     flex: {
-        width: 180,
+        width: 280,
         flexDirection: "row",
         justifyContent: "space-between",
         alignItems: "center",
+        marginLeft:10
 
 
     },
     innerView:{
         borderRadius: 20,
+        padding:10,
         backgroundColor: Colors.white,
         shadowColor: "#000",
         shadowOffset: {

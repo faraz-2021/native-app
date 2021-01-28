@@ -1,12 +1,10 @@
 import React, { useState } from 'react';
-import { StyleSheet, Text,  TextInput, TouchableOpacity, View } from 'react-native';
+import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import Icon from 'react-native-vector-icons/AntDesign';
 import TodoModal from './TodoPopUp';
 
 
 export default function Todo() {
-    const [isSelected, setSelection] = useState(false);
-    const [value, setValue] = useState('')
     const [modalVisible, setModalVisible] = useState(false);
 
     return (
