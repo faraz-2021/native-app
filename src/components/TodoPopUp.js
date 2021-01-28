@@ -5,7 +5,6 @@ import { Colors } from './color/color';
 export default function TodoModal(props) {
     const [value, setValue] = useState('Useless Placeholder');
 
-
     console.log(props)
     return (
         <View style={{}}>
@@ -27,7 +26,8 @@ export default function TodoModal(props) {
                             value={value}
                         />
                         <View style={styles.flex}>
-                            <TouchableOpacity ><Text style={styles.Button}>Cancel</Text></TouchableOpacity>
+                        
+                            <TouchableOpacity onPress={props.x}><Text style={styles.Button}>Cancel</Text></TouchableOpacity>
                             <TouchableOpacity ><Text style={styles.Button}>Done</Text></TouchableOpacity>
                         </View>
                     </View>
@@ -37,7 +37,7 @@ export default function TodoModal(props) {
             </Modal>
 
 
-        </View>
+        </View >
     )
 }
 
@@ -58,7 +58,7 @@ const styles = StyleSheet.create({
         borderRadius: 20,
         padding: 35,
         alignItems: "center",
-        shadowColor: "#000",
+        shadowColor: Colors.black,
         shadowOffset: {
             width: 0,
             height: 2
@@ -68,7 +68,7 @@ const styles = StyleSheet.create({
         elevation: 5
     },
     Button: {
-        color:Colors.blue,
+        color: Colors.blue,
         fontSize: 15,
         marginTop: 10,
 
@@ -86,15 +86,15 @@ const styles = StyleSheet.create({
         flexDirection: "row",
         justifyContent: "space-between",
         alignItems: "center",
-        marginLeft:10
+        marginLeft: 10
 
 
     },
-    innerView:{
+    innerView: {
         borderRadius: 20,
-        padding:10,
+        padding: 10,
         backgroundColor: Colors.white,
-        shadowColor: "#000",
+        shadowColor: Colors.black,
         shadowOffset: {
             width: 0,
             height: 2

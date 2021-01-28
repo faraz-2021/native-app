@@ -1,11 +1,16 @@
 import React, { useState } from 'react';
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import Icon from 'react-native-vector-icons/AntDesign';
+import { Colors } from 'react-native/Libraries/NewAppScreen';
 import TodoModal from './TodoPopUp';
 
 
 export default function Todo() {
     const [modalVisible, setModalVisible] = useState(false);
+
+    const handleClick = () =>{
+        setModalVisible(!modalVisible)
+    }
 
     return (
         <View style={styles.Main}>
@@ -19,7 +24,7 @@ export default function Todo() {
                 </TouchableOpacity>
             </View>
 
-            {modalVisible ? <TodoModal modalVisible={modalVisible} /> : null}
+            {modalVisible ? <TodoModal modalVisible={modalVisible} x={handleClick} /> : null}
 
             <View>
               
@@ -32,7 +37,7 @@ export default function Todo() {
 
 const styles = StyleSheet.create({
     Main: {
-        backgroundColor: '#fff',
+        backgroundColor: Colors.white,
         borderWidth: 1,
         justifyContent: "center"
     },

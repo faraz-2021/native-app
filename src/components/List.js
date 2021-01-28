@@ -53,6 +53,6 @@ const DATA = [
       fontSize: 32,
     },
   });
-  
+
 
   export default List;
