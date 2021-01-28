@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { StyleSheet, Text,  TextInput, TouchableOpacity, View } from 'react-native';
 import Icon from 'react-native-vector-icons/AntDesign';
-import TodoContent from './TodoPopUp';
+import TodoModal from './TodoPopUp';
 
 
 export default function Todo() {
@@ -12,9 +12,7 @@ export default function Todo() {
     return (
         <View style={styles.Main}>
             <View style={styles.Head}>
-                <Text style={styles.t1}>
-                    Today
-            </Text>
+            <Text style={styles.t1}>Today  </Text>
                 <TouchableOpacity onPress={() => {
                     setModalVisible(!modalVisible);
                     console.log(setModalVisible)
@@ -23,7 +21,7 @@ export default function Todo() {
                 </TouchableOpacity>
             </View>
 
-            {modalVisible ? <View> <TodoContent modalVisible={modalVisible} /></View> : null}
+            {modalVisible ? <TodoModal modalVisible={modalVisible} /> : null}
 
             <View>
               
