@@ -1,4 +1,5 @@
 export const Colors = {
+  fadeWhite: "#F9C2FF",
   grey: "#DCDCDC",
   green: "#03fc7b",
   red: "#F24444",

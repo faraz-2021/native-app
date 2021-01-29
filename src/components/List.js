@@ -69,7 +69,7 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   item: {
-    backgroundColor: "#F9C2FF",
+    backgroundColor: Colors.fadeWhite,
     padding: 20,
     marginVertical: 8,
     marginHorizontal: 16,
@@ -93,7 +93,7 @@ const styles = StyleSheet.create({
     fontSize: 25,
   },
   checkButton: {
-    fontSize: 22,
+    fontSize: 30,
     color: Colors.blue,
   },
 });

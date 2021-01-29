@@ -10,7 +10,6 @@ import {
 import { Colors } from "./color/color";
 export default function TodoModal(props) {
   const [text, setText] = useState("");
-  console.log(props);
   return (
     <View>
       <Modal
@@ -55,8 +54,9 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   modalView: {
-    height: 200,
-    width: 300,
+    height: 180,
+    width: 290,
+    marginLeft: 9,
     backgroundColor: Colors.white,
     borderRadius: 20,
     padding: 35,
@@ -72,7 +72,7 @@ const styles = StyleSheet.create({
   },
   Button: {
     color: Colors.blue,
-    fontSize: 15,
+    fontSize: 20,
     marginTop: 10,
   },
   textStyle: {
@@ -83,18 +83,19 @@ const styles = StyleSheet.create({
   modalText: {
     width: 300,
     fontWeight: "bold",
-    fontSize: 20,
+    fontSize: 25,
+    marginLeft: 10,
   },
   flex: {
-    width: 280,
+    width: 250,
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
-    marginLeft: 10,
+    marginLeft: 20,
   },
   innerView: {
     borderRadius: 20,
-    padding: 10,
+    padding: 15,
     backgroundColor: Colors.white,
     shadowColor: Colors.black,
     shadowOffset: {

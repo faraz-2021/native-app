@@ -12,12 +12,11 @@ export default function TodoApp() {
           { title: text.trim(), key: Math.random().toString(), check: false },
         ];
       });
+    } else {
+      Alert.alert("error!", "List can't be empty", [
+        { text: "Ok", onPress: () => console.log("Alert Closed") },
+      ]);
     }
-    else {
-        Alert.alert("error!", "List can't be empty", [
-          { text: "Ok", onPress: () => console.log("Alert Closed") },
-        ]);
-      }
   };
 
   const setCheck = (key) => {
