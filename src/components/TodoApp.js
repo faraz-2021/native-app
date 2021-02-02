@@ -1,38 +1,30 @@
 import React, { useState } from "react";
-import { View, Alert } from "react-native";
+import { View, Alert, StyleSheet } from "react-native";
 import TodoHeader from "./TodoHeader";
 import List from "./List";
-export default function TodoApp() {
-  const [todo, setTodo] = useState([]);
-  const addTodos = (text) => {
-    if (text.trim().length > 0) {
-      setTodo((prevValue) => {
-        return [
-          ...prevValue,
-          { title: text.trim(), key: Math.random().toString(), check: false },
-        ];
-      });
-    } else {
-      Alert.alert("error!", "List can't be empty", [
-        { text: "Ok", onPress: () => console.log("Alert Closed") },
-      ]);
-    }
-  };
+import { StatusBar } from "expo-status-bar";
+import Constants from "expo-constants";
+import { useEffect } from "react";
 
-  const setCheck = (key) => {
-    const newList = todo.map((e) => {
-      if (e.key === key) {
-        return { ...e, check: !e.check };
-      } else {
-        return { ...e };
-      }
-    });
-    setTodo(newList);
-  };
+export default function TodoApp({
+  type,
+  addTodos,
+  todo,
+  setCheck,
+}) {
+  useEffect(() => {
+  }, [type]);
+
   return (
-    <View>
-      <TodoHeader addTodos={addTodos} />
+    <View style={styles.Margin}>
+      <TodoHeader addTodos={addTodos} type={type} />
       <List todo={todo} setCheck={setCheck} />
     </View>
   );
 }
+
+const styles = StyleSheet.create({
+  Margin: {
+    marginTop: Constants.statusBarHeight,
+  },
+});

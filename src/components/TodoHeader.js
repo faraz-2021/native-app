@@ -3,6 +3,7 @@ import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import Icon from "react-native-vector-icons/AntDesign";
 import { Colors } from "./color/color";
 import TodoModal from "./TodoPopUp.js";
+
 export default function TodoHeader(props) {
   const [modalVisible, setModalVisible] = useState(false);
   const handleClick = () => {
@@ -11,14 +12,16 @@ export default function TodoHeader(props) {
   return (
     <View style={styles.Main}>
       <View style={styles.Head}>
-        <Text style={styles.t1}>Today </Text>
-        <TouchableOpacity
-          onPress={() => {
-            setModalVisible(!modalVisible);
-          }}
-        >
-          <Icon name="pluscircleo" size={30} />
-        </TouchableOpacity>
+        <Text style={styles.t1}>{props.type} </Text>
+        {props.type == "Today" ? (
+          <TouchableOpacity
+            onPress={() => {
+              setModalVisible(!modalVisible);
+            }}
+          >
+            <Icon name="pluscircleo" size={30} />
+          </TouchableOpacity>
+        ) : null}
       </View>
       {modalVisible ? (
         <TodoModal
@@ -26,6 +29,7 @@ export default function TodoHeader(props) {
           handleClick={handleClick}
           addTodos={props.addTodos}
           setModalVisible={setModalVisible}
+          activeList={props.activeList}
         />
       ) : null}
       <View></View>
@@ -49,7 +53,7 @@ const styles = StyleSheet.create({
     paddingRight: 10,
   },
   t1: {
-    fontSize: 30,
     fontWeight: "bold",
+    fontSize: 30,
   },
 });
