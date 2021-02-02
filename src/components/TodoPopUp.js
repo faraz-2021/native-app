@@ -9,6 +9,7 @@ import {
 } from "react-native";
 import { Colors } from "./color/color";
 export default function TodoModal(props) {
+
   const [text, setText] = useState("");
   return (
     <View>
