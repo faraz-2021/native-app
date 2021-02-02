@@ -97,10 +97,6 @@ export default function App() {
     }
   };
 
-  // useEffect(() => {
-
-  // }, []);
-
   const setCheck = (key) => {
     const newList = todo.map((e) => {
       if (e.key === key) {
@@ -138,23 +134,7 @@ export default function App() {
           )}
         </Tab.Screen>
       </Tab.Navigator>
+      <StatusBar style="auto"/>
     </NavigationContainer>
   );
 }
-
-const styles = StyleSheet.create({
-  Active: {
-    backgroundColor: Colors.white,
-    justifyContent: "center",
-    borderBottomWidth: 1,
-    borderBottomColor: Colors.grey,
-    padding: 10,
-  },
-  status: {
-    marginTop: Constants.statusBarHeight,
-  },
-  t1: {
-    fontWeight: "bold",
-    fontSize: 30,
-  },
-});

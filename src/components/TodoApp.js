@@ -19,7 +19,6 @@ export default function TodoApp({
     <View style={styles.Margin}>
       <TodoHeader addTodos={addTodos} type={type} />
       <List todo={todo} setCheck={setCheck} />
-      <StatusBar style="auto" />
     </View>
   );
 }
