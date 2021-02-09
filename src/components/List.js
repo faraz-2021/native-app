@@ -77,12 +77,14 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 25,
     marginLeft: 10,
+    fontFamily: "Roboto-italic",
   },
   title1: {
     fontSize: 25,
     marginLeft: 10,
     textDecorationLine: "line-through",
     opacity: 0.3,
+    fontFamily: "Roboto-italic",
   },
   indicator: {
     color: Colors.green,

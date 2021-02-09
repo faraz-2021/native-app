@@ -1,15 +1,14 @@
 {
   "expo": {
     "name": "my-project",
-    "description":"my first todo app",
+    "description": "my first todo app",
     "slug": "my-project",
     "version": "1.0.0",
     "orientation": "portrait",
-    "sdkVersion": "36.0.0",
     "icon": "./assets/icon.png",
     "splash": {
-      "image": "./assets/splash.png",
-      "resizeMode": "contain",
+      "image": "./assets/download.jpeg",
+      "resizeMode": "cover",
       "backgroundColor": "#ffffff"
     },
     "ios": {
@@ -21,9 +20,8 @@
     "assetBundlePatterns": [
       "**/*"
     ],
-
     "android": {
-      "package":"com.excellencetechnologies.my-project",
+      "package": "com.excellencetechnologies.my-project",
       "versionCode": 1,
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",

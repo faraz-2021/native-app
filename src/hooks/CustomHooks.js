@@ -12,9 +12,7 @@ export default function useAdd() {
         ];
       });
     } else {
-      Alert.alert("error!", "List can't be empty", [
-        { text: "Ok", onPress: () => console.log("Alert Closed") },
-      ]);
+      alert( "List can't be empty");
     }
   };
   const setCheck = (key) => {
