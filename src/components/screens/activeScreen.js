@@ -25,6 +25,7 @@ export default function Active({ addTodos, todo, setCheck }) {
           todo={active}
           setCheck={setCheck}
         />
+      <Button title="Sign Out" onPress={navigation.navigate("login")}/>
       </View>
     </ScrollView>
   );
